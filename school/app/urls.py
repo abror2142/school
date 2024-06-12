@@ -5,7 +5,7 @@ from rest_framework_simplejwt.views import (
     TokenRefreshView,
 )
 
-from .views import SubjectAPIView, TeacherAPIView, TeacherSubjectAPIView, ClassAPIView, StudentAPIView
+from .views import SubjectAPIView, TeacherAPIView, TeacherSubjectAPIView, ClassAPIView, StudentAPIView, LessonAPIView, LessonVideoAPIView
 
 
 router = routers.SimpleRouter()
@@ -14,6 +14,8 @@ router.register('teacher', TeacherAPIView)
 router.register('teacher-subject', TeacherSubjectAPIView)
 router.register('class', ClassAPIView)
 router.register('student', StudentAPIView)
+router.register('lesson', LessonAPIView)
+router.register('lesson-video', LessonVideoAPIView)
 
 
 urlpatterns = [
